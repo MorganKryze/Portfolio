@@ -1,0 +1,11 @@
+/* main.css */
+@import 'base';
+@import 'components';
+@import 'utilities';
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+@layer base {
+    html {
+      font-family: "Orbitron", system-ui, sans-serif;
+    }
+  }
