@@ -5,24 +5,25 @@ interface Props {
 
 const { title } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Photography portfolio" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<title>{title}</title>
-		<style>
-			.bg-image {
-				background-image: url('/background.jpg');
-				background-color: black;
-				background-size: cover;
-				background-position: center;
-			}
-		</style>
-	</head>
-	<body class="bg-image">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Photography portfolio" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <style>
+      .bg-image {
+        background-image: url("/background.jpg");
+        background-color: black;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body class="bg-image">
+    <slot />
+  </body>
 </html>

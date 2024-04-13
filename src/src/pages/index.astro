@@ -10,9 +10,7 @@ import "@fontsource/orbitron";
     <Nav />
 
     <div class="flex justify-center items-center h-full">
-      <h1 class="text-5xl transition-opacity duration-1000">
-        Welcome to my universe
-      </h1>
+      <h1 class="text-5xl">Welcome to my universe</h1>
     </div>
 
     <div style="height: 500px;"></div>
@@ -32,11 +30,3 @@ import "@fontsource/orbitron";
     <div style="height: 500px;"></div>
   </main>
 </Layout>
-
-<script>
-	window.addEventListener('scroll', () => {
-	  const scrollPosition = window.scrollY;
-	  const opacity = 1 - scrollPosition / 500; // Adjust 500 to control the speed of fading
-	  document.querySelector('h1').style.opacity = opacity.toString();
-	});
-  </script>
