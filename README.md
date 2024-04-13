@@ -6,6 +6,8 @@
 
 ...
 
+Using pnpm (svelte, tailwind)
+
 ### Prerequisites
 
 ...
