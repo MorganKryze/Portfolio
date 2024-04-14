@@ -5,6 +5,7 @@ import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Card from "../components/Card.astro";
 import Spacer from "../components/Spacer.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <script>
@@ -45,10 +46,8 @@ import Spacer from "../components/Spacer.astro";
   }
 </style>
 
-<Layout>
+<Layout currentPage="home">
   <main class="overflow-y-scroll h-screen text-white">
-    <Nav currentPage="home" />
-
     <div class="flex justify-center items-center h-full">
       <h1 class="text-5xl hide">Welcome to my Universe</h1>
     </div>
@@ -56,7 +55,7 @@ import Spacer from "../components/Spacer.astro";
     <Spacer size="h-48" />
 
     <div class="flex justify-center items-center">
-      <h1 class="text-5xl hide">See categories</h1>
+      <h1 class="text-5xl hide">See collections</h1>
     </div>
 
     <Spacer size="h-24" />
@@ -64,11 +63,18 @@ import Spacer from "../components/Spacer.astro";
     <div
       class="hide flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-16"
     >
-      <Card image="/img/im1.jpg" title="Street" />
-      <Card image="/img/im2.jpg" title="Sunset" />
-      <Card image="/img/im3.jpg" title="Animal" />
+      <Card image="/img/im1.jpg" title="Ireland" />
+      <Card image="/img/im2.jpg" title="Sardegna" />
+      <Card image="/img/im3.jpg" title="France" />
     </div>
 
+    <Spacer size="h-96" />
+
+    <div class="flex justify-center items-center">
+      <h1 class="text-5xl hide">Get in touch</h1>
+    </div>
+
+    <Spacer size="h-72" />
     <Spacer size="h-72" />
   </main>
 </Layout>

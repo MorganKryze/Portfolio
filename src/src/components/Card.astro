@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   title: string;
   image: string;
@@ -10,11 +12,7 @@ const { title, image } = Astro.props;
 <div
   class="relative group bg-white shadow-lg rounded-lg overflow-hidden flex-1"
 >
-  <img
-    src={Astro.props.image}
-    alt={Astro.props.title}
-    class="w-full h-64 object-cover"
-  />
+  <img src={image} alt={title} class="w-full h-64 object-cover" />
   <div
     class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black to-transparent opacity-50"
   >
@@ -26,7 +24,7 @@ const { title, image } = Astro.props;
       href="/category-url"
       class="text-white text-lg font-medium group-hover:underline"
     >
-      <span>{Astro.props.title}</span>
+      <span>{title}</span>
     </a>
     <img src="/icons/arrow-right.svg" alt="Icon" class="h-6 w-6" />
   </div>

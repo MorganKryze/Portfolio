@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 interface Props {
   currentPage: string;
 }
@@ -6,13 +8,26 @@ interface Props {
 const { currentPage } = Astro.props;
 ---
 
+<style>
+  .underline-lower {
+    border-bottom: 2px solid currentColor;
+    transform: translateY(2px);
+  }
+</style>
+
 <nav class="fixed top-0 left-0 right-0">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
         <div class="flex-shrink-0">
           <a href="/">
-            <img class="h-8 w-8" src="/favicon.svg" alt="Logo" />
+            <Image
+              src="/favicon.svg"
+              alt="Logo"
+              width={36}
+              height={36}
+              loading="eager"
+            />
           </a>
         </div>
         <a href="/">
@@ -22,22 +37,22 @@ const { currentPage } = Astro.props;
           <div class="ml-10 flex items-baseline space-x-4">
             <a
               href="/"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "home" ? "underline" : ""}`}
+              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "home" ? "underline-lower" : ""}`}
               >Home</a
             >
             <a
               href="#"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "services" ? "underline" : ""}`}
-              >Categories</a
+              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "collections" ? "underline-lower" : ""}`}
+              >Collections</a
             >
             <a
               href="/about"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "about" ? "underline" : ""}`}
+              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "about" ? "underline-lower" : ""}`}
               >About</a
             >
             <a
               href="/contact"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "contact" ? "underline" : ""}`}
+              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "contact" ? "underline-lower" : ""}`}
               >Contact</a
             >
           </div>

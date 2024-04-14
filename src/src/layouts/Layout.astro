@@ -1,3 +1,14 @@
+---
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+
+interface Props {
+  currentPage: string;
+}
+
+const { currentPage } = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,6 +27,8 @@
     </style>
   </head>
   <body class="bg-image">
+    <Nav currentPage={Astro.props.currentPage} />
     <slot />
+    <Footer />
   </body>
 </html>
