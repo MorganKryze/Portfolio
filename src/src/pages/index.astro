@@ -1,10 +1,10 @@
 ---
+import "@fontsource/orbitron";
+
 import Layout from "../layouts/Layout.astro";
 import Nav from "../components/Nav.astro";
 import Card from "../components/Card.astro";
 import Spacer from "../components/Spacer.astro";
-
-import "@fontsource/orbitron";
 ---
 
 <script>
@@ -27,13 +27,15 @@ import "@fontsource/orbitron";
 <style>
   .hide {
     opacity: 0;
-    transform: translateY(20px);
+    filter: blur(5px);
+    transform: translateY(40px);
     transition: all 1s;
   }
 
   .show {
     opacity: 1;
-    transform: translateY(0);
+    filter: blur(0);
+    transform: translateY(10px);
   }
 
   @media (prefers-reduced-motion) {
@@ -48,25 +50,23 @@ import "@fontsource/orbitron";
     <Nav currentPage="home" />
 
     <div class="flex justify-center items-center h-full">
-      <h1 class="text-5xl">Welcome to my Universe</h1>
+      <h1 class="text-5xl hide">Welcome to my Universe</h1>
     </div>
 
     <Spacer size="h-48" />
 
-    <div class="hide">
-      <div class="flex justify-center items-center">
-        <h1 class="text-5xl">See categories</h1>
-      </div>
+    <div class="flex justify-center items-center">
+      <h1 class="text-5xl hide">See categories</h1>
+    </div>
 
-      <Spacer size="h-24" />
+    <Spacer size="h-24" />
 
-      <div
-        class="flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-16"
-      >
-        <Card image="/img/im1.jpg" title="Street" />
-        <Card image="/img/im2.jpg" title="Sunset" />
-        <Card image="/img/im3.jpg" title="Animal" />
-      </div>
+    <div
+      class="hide flex flex-col md:flex-row space-y-6 md:space-y-0 md:space-x-6 px-4 md:px-16"
+    >
+      <Card image="/img/im1.jpg" title="Street" />
+      <Card image="/img/im2.jpg" title="Sunset" />
+      <Card image="/img/im3.jpg" title="Animal" />
     </div>
 
     <Spacer size="h-72" />
