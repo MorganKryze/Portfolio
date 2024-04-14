@@ -1,13 +1,33 @@
 ---
+interface Props {
+  title: string;
+  image: string;
+}
 
+const { title, image } = Astro.props;
 ---
-<div class="relative group bg-white shadow-lg rounded-lg overflow-hidden flex-1">
-    <img src={Astro.props.image} alt={Astro.props.title} class="w-full h-64 object-cover" />
-    <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black to-transparent opacity-50"></div>
-    <div class="absolute bottom-0 left-0 p-6 flex items-center justify-between w-full">
-        <a href="/category-url" class="text-white text-lg font-medium group-hover:underline">
-            <span>{Astro.props.title}</span>
-        </a>
-        <img src="/icons/arrow-right.svg" alt="Icon" class="h-6 w-6" />
-    </div>
+
+<div
+  class="relative group bg-white shadow-lg rounded-lg overflow-hidden flex-1"
+>
+  <img
+    src={Astro.props.image}
+    alt={Astro.props.title}
+    class="w-full h-64 object-cover"
+  />
+  <div
+    class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black to-transparent opacity-50"
+  >
+  </div>
+  <div
+    class="absolute bottom-0 left-0 p-6 flex items-center justify-between w-full"
+  >
+    <a
+      href="/category-url"
+      class="text-white text-lg font-medium group-hover:underline"
+    >
+      <span>{Astro.props.title}</span>
+    </a>
+    <img src="/icons/arrow-right.svg" alt="Icon" class="h-6 w-6" />
+  </div>
 </div>
