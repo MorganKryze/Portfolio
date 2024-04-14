@@ -19,3 +19,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+---
+
+Photographs and Images Copyright Notice
+
+All photographs and images contained in this project are the property of Yann M. Vidamment (MorganKryze) and are protected by the French and international copyright laws. They are provided for viewing purposes only. None of the photographs in this project may be reproduced or reused in any form, by any electronic or mechanical means, including information storage and retrieval systems, without permission in writing from Yann M. Vidamment (MorganKryze). For content licensing requests, please contact <morgan@kodelab.fr>.
