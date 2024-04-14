@@ -31,7 +31,9 @@ const { currentPage } = Astro.props;
           </a>
         </div>
         <a href="/">
-          <div class="ml-4 text-white text-lg font-bold sm:text-xl">Photographolio</div>
+          <div class="ml-4 text-white text-lg font-bold sm:text-xl">
+            Photographolio
+          </div>
         </a>
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
@@ -43,13 +45,21 @@ const { currentPage } = Astro.props;
             <a
               href="/about"
               class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "about" ? "underline-lower" : ""}`}
-              >About</a
+              >About me</a
             >
             <a
               href="#"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "collections" ? "underline-lower" : ""}`}
-              >Collections</a
+              class={`flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "collections" ? "underline-lower" : ""}`}
             >
+              Collections
+              <Image
+                src="/icons/chevron-down.svg"
+                alt="Collections Icon"
+                width={20}
+                height={20}
+                class="ml-2"
+              />
+            </a>
           </div>
         </div>
       </div>
