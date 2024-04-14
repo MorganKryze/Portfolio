@@ -27,7 +27,7 @@ const { currentPage } = Astro.props;
     </style>
   </head>
   <body class="bg-image">
-    <Nav currentPage={Astro.props.currentPage} />
+    <Nav currentPage={currentPage} />
     <slot />
     <Footer />
   </body>
