@@ -2,6 +2,8 @@
 
 > An elegant photography portfolio website built with Astro.
 
+![Presentation](./presentation.jpg)
+
 ## Getting Started
 
 ...
