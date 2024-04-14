@@ -1,0 +1,46 @@
+---
+import "@fontsource/orbitron";
+
+import Layout from "../layouts/Layout.astro";
+import Spacer from "../components/Spacer.astro";
+---
+
+<Layout currentPage="tos">
+  <main class="text-white">
+    <section class="h-screen container mx-auto px-4 py-8">
+      <Spacer size="h-24" />
+
+      <h1 class="text-4xl font-bold">Terms of Service</h1>
+      <h2 class="text-xl text-gray-400 mt-2">
+        Last updated: {new Date().toLocaleDateString()}
+      </h2>
+
+      <p class="mt-8 text-lg">
+        The following terms and conditions govern all use of this website and
+        all content, services, and products available at or through the website.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Intellectual Property</h2>
+
+      <p class="mt-4 text-lg">
+        This website and its original content, features, and functionality are
+        owned by me and are protected by international copyright, trademark,
+        patent, trade secret, and other intellectual property or proprietary
+        rights laws. You may not duplicate, copy, or reuse any portion of the
+        HTML, CSS, JavaScript, or visual design elements without express written
+        permission from me.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Contact Information</h2>
+
+      <p class="mt-4 text-lg">
+        For any inquiries or questions regarding these Terms of Service, please
+        contact me via email at <a
+        href="mailto:morgan@kodelab.fr"
+        style="color: hsl(195, 60%, 60%);"
+        >morgan@kodelab.fr</a
+      >.
+      </p>
+    </section>
+  </main>
+</Layout>

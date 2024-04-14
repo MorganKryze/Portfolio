@@ -1,0 +1,54 @@
+---
+import "@fontsource/orbitron";
+
+import Spacer from "../components/Spacer.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout currentPage="privacy">
+  <main class="text-white">
+    <section class="h-screen container mx-auto px-4 py-8">
+      <Spacer size="h-24" />
+
+    <h1 class="text-4xl font-bold">Privacy Policy</h1>
+    <h2 class="text-xl text-gray-400 mt-2">Last updated: {new Date().toLocaleDateString()}</h2>
+
+      <p class="mt-8 text-lg">
+        This website is a personal portfolio and does not collect any personal
+        data from its visitors. It serves only the purpose of showcasing my
+        work.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Personal Data</h2>
+
+      <p class="mt-4 text-lg">
+        As this website does not provide any forms, comment sections, or similar
+        features, it does not collect any personal data like names, email
+        addresses, or other personal information.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Cookies</h2>
+
+      <p class="mt-4 text-lg">
+        This website does not use cookies. A cookie is a small piece of data
+        stored on the user's computer by the web browser while browsing a
+        website.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Analytics</h2>
+
+      <p class="mt-4 text-lg">
+        This website does not use any analytics services or tools that track
+        user behavior.
+      </p>
+
+      <h2 class="mt-8 text-2xl font-bold">Changes to This Privacy Policy</h2>
+
+      <p class="mt-4 text-lg">
+        This Privacy Policy is effective as of the date stated at the top of
+        this Privacy Policy. We may change this Privacy Policy from time to time
+        and will post any changes on the Website as soon as they go into effect.
+      </p>
+    </section>
+  </main>
+</Layout>
