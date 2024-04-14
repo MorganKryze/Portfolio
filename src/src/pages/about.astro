@@ -1,14 +1,58 @@
 ---
+import Spacer from "../components/Spacer.astro";
 import Layout from "../layouts/Layout.astro";
-import Nav from "../components/Nav.astro";
+import { Image } from "astro:assets";
 
 import "@fontsource/orbitron";
 ---
 
 <Layout currentPage="about">
   <main class="text-white">
-    <div class="flex justify-center items-center h-screen">
-      <h1 class="text-5xl">About</h1>
-    </div>
+    <section class="container h-screen mx-auto px-4 py-8">
+      <Spacer size="h-36" />
+
+      <div class="flex justify-between items-center">
+        <h1 class="text-4xl font-bold">About</h1>
+        <Image
+          src="/profile.png"
+          alt="Profile Picture"
+          width={100}
+          height={100}
+          class="rounded-full"
+        />
+      </div>
+
+      <Spacer size="h-16" />
+
+      <div>
+        <p class="text-lg">
+          I'm a software engineer student based in France. I have a passion
+          for building things and solving problems.
+        </p>
+
+        <Spacer size="h-8" />
+
+        <p class="text-lg">
+          I specialize in back-end development, with a rising interest on
+          front-end technologies. I enjoy creating user-friendly, accessible,
+          and responsive web applications for my projects. Feel free to check
+          out my other {" "}
+          <a
+            href="https://github.com/MorganKryze"
+            class="hover:underline"
+            style="color: hsl(195, 60%, 60%);">projects</a
+          > to see some of my work.
+        </p>
+
+        <Spacer size="h-8" />
+
+        <p class="text-lg">
+          This project was for me a chance to explore Astro and its
+          capabilities, but also to create my first photography portfolio. I'm
+          a beginner in photography, but I'm eager to learn and improve my
+          skills.
+        </p>
+      </div>
+    </section>
   </main>
 </Layout>
