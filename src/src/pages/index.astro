@@ -45,9 +45,9 @@ import Spacer from "../components/Spacer.astro";
 </style>
 
 <Layout currentPage="home">
-  <main class="overflow-y-scroll h-screen text-white">
-    <div class="flex justify-center items-center h-full">
-      <h1 class="text-5xl hide">Welcome to my Universe</h1>
+  <main class="text-white">
+    <div class="flex justify-center items-center h-screen">
+      <h1 class="text-5xl">Welcome to my Universe</h1>
     </div>
 
     <Spacer size="h-48" />
@@ -72,7 +72,18 @@ import Spacer from "../components/Spacer.astro";
       <h1 class="text-5xl hide">Get in touch</h1>
     </div>
 
-    <Spacer size="h-72" />
+    <Spacer size="h-24" />
+
+    <div class="flex justify-center items-center mt-4">
+      <p class="text-lg text-center hide">
+        I'd love to hear from you. Feel free to reach out to me at <a
+          href="mailto:morgan@kodelab.fr"
+          style="color: hsl(195, 60%, 60%);"
+          >morgan@kodelab.fr</a
+        >.
+      </p>
+    </div>
+
     <Spacer size="h-72" />
   </main>
 </Layout>

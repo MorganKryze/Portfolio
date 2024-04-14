@@ -15,7 +15,7 @@ const { currentPage } = Astro.props;
   }
 </style>
 
-<nav class="fixed top-0 left-0 right-0">
+<nav class="fixed top-0 left-0 right-0 z-50">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="flex items-center">
@@ -31,7 +31,7 @@ const { currentPage } = Astro.props;
           </a>
         </div>
         <a href="/">
-          <div class="ml-4 text-white text-lg font-bold">Photographolio</div>
+          <div class="ml-4 text-white text-lg font-bold sm:text-xl">Photographolio</div>
         </a>
         <div class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-4">
@@ -41,25 +41,18 @@ const { currentPage } = Astro.props;
               >Home</a
             >
             <a
-              href="#"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "collections" ? "underline-lower" : ""}`}
-              >Collections</a
-            >
-            <a
               href="/about"
               class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "about" ? "underline-lower" : ""}`}
               >About</a
             >
             <a
-              href="/contact"
-              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "contact" ? "underline-lower" : ""}`}
-              >Contact</a
+              href="#"
+              class={`text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "collections" ? "underline-lower" : ""}`}
+              >Collections</a
             >
           </div>
         </div>
       </div>
-      <!-- ... -->
     </div>
   </div>
-  <!-- ... -->
 </nav>
