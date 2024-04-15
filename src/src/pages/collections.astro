@@ -1,6 +1,4 @@
 ---
-import "../animations/hide.astro";
-
 import EmptyCardLeft from "../components/EmptyCardLeft.astro";
 import EmptyCardRight from "../components/EmptyCardRight.astro";
 import Spacer from "../components/Spacer.astro";
@@ -15,75 +13,55 @@ import Layout from "../layouts/Layout.astro";
 
       <Spacer size="h-16" />
 
-      <div class="hide">
-        <EmptyCardLeft
-          image="/img/ireland/im64.jpg"
-          title="Ireland"
-          link="/collections/ireland"
-        >
-          <Spacer size="h-6" />
-          <p class="text-lg" style="max-width: 40vw;">
-            Ireland is a country that I've always wanted to visit. I had the
-            chance to go there in 2019, and I fell in love with the landscapes,
-            the people, and the culture. I can't wait to go back and explore
-            more of this beautiful country.
-          </p>
-        </EmptyCardLeft>
-      </div>
+      <EmptyCardLeft
+        image="/img/ireland/im64.jpg"
+        title="Ireland"
+        link="/collections/ireland"
+        description={`Ireland is a country that I've always wanted to visit. I had the
+          chance to go there in 2019, and I fell in love with the landscapes,
+          the people, and the culture. I can't wait to go back and explore
+          more of this beautiful country.`}
+      />
 
       <Spacer size="h-24" />
 
-      <div class="hide">
-        <EmptyCardRight
-          image="/img/sardegna/im6.jpg"
-          title="Sardegna"
-          link="/collections/sardegna"
-        >
-          <Spacer size="h-6" />
-          <p class="text-lg" style="max-width: 40vw;">
-            Sardegna is a beautiful island in the Mediterranean Sea. I had the
-            chance to visit it in 2018, and I was amazed by the crystal-clear
-            waters, the white sandy beaches, and the stunning landscapes. I
-            can't wait to go back and explore more of this amazing island.
-          </p>
-        </EmptyCardRight>
-      </div>
+      <EmptyCardRight
+        image="/img/sardegna/im6.jpg"
+        title="Sardegna"
+        link="/collections/sardegna"
+        description={`Sardegna is a beautiful island in the Mediterranean Sea. I had the
+          chance to visit it in 2018, and I was amazed by the crystal-clear
+          waters, the white sandy beaches, and the stunning landscapes. I
+          can't wait to go back and explore more of this amazing island.`}
+      />
 
       <Spacer size="h-24" />
 
-      <div class="hide">
-        <EmptyCardLeft
-          image="/img/france/im31.jpg"
-          title="France"
-          link="/collections/france"
-        >
-          <Spacer size="h-6" />
-          <p class="text-lg" style="max-width: 40vw;">
-            France is a country that I've always loved. I had the chance to
-            visit it in 2017, and I was amazed by the beautiful landscapes, the
-            delicious food, and the rich history. I can't wait to go back and
-            explore more of this amazing country.
-          </p>
-        </EmptyCardLeft>
-      </div>
+      <EmptyCardLeft
+        image="/img/france/im31.jpg"
+        title="France"
+        link="/collections/france"
+        description={`France is a country that I've always loved. I had the chance to
+          visit it many times, and I was always amazed by the beauty of its
+          landscapes, the richness of its culture, and the kindness of its
+          people. I can't wait to go back and explore more of this wonderful
+          country.`}
+      />
 
       <Spacer size="h-24" />
 
-      <div class="hide">
-        <EmptyCardRight
-          image="/img/rototo/im14.jpg"
-          title="The tales of Rototo"
-          link="/collections/tales"
-        >
-          <Spacer size="h-6" />
-          <p class="text-lg" style="max-width: 40vw;">
-            The tales of Rototo is a collection of short stories that I wrote
-            during the lockdown. They are inspired by my travels and my
-            imagination. I hope you enjoy reading them as much as I enjoyed
-            writing them.
-          </p>
-        </EmptyCardRight>
-      </div>
+      <EmptyCardRight
+        image="/img/rototo/im14.jpg"
+        title="The tales of Rototo"
+        link="/collections/tales"
+        description={`Rototo is a small village in the heart of the mountains. It is a
+            place where time seems to have stopped, where the people live in
+            harmony with nature, and where the stories of the past are still
+            alive. I had the chance to visit Rototo in 2017, and I was amazed
+            by the beauty of the landscapes, the richness of the culture, and
+            the kindness of the people. I can't wait to go back and explore
+            more of this magical place.`}
+      />
 
       <Spacer size="h-24" />
     </section>

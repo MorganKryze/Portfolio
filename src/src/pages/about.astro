@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../animations/hide.astro";
 
 import Spacer from "../components/Spacer.astro";
 import Layout from "../layouts/Layout.astro";
@@ -8,8 +9,8 @@ import { Image } from "astro:assets";
 
 <Layout currentPage="about">
   <main class="text-white">
-    <section class="container h-screen mx-auto px-4 py-8">
-      <Spacer size="h-24" />
+    <section class="container mx-auto px-4 py-8">
+      <Spacer size="h-16" />
 
       <div class="flex justify-between items-center">
         <h1 class="text-4xl font-bold">About me</h1>
@@ -22,17 +23,17 @@ import { Image } from "astro:assets";
         />
       </div>
 
-      <Spacer size="h-16" />
+      <Spacer size="h-12" />
 
       <div>
-        <p class="text-lg">
+        <p class="text-lg hide-1">
           I'm a software engineer student based in France. I have a passion for
           building things and solving problems.
         </p>
 
         <Spacer size="h-8" />
 
-        <p class="text-lg">
+        <p class="text-lg hide-2">
           I specialize in back-end development, with a rising interest on
           front-end technologies. I enjoy creating user-friendly, accessible,
           and responsive web applications for my projects. Feel free to check
@@ -46,12 +47,13 @@ import { Image } from "astro:assets";
 
         <Spacer size="h-8" />
 
-        <p class="text-lg">
+        <p class="text-lg hide-3">
           This project was for me a chance to explore Astro and its
           capabilities, but also to create my first photography portfolio. I'm a
           beginner in photography, but I'm eager to learn and improve my skills.
         </p>
       </div>
+      <Spacer size="h-96" />
     </section>
   </main>
 </Layout>

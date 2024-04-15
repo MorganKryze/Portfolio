@@ -1,21 +1,30 @@
 ---
 import "../styles/global.css";
+import "../animations/hide.astro";
+
+import Spacer from "./Spacer.astro";
 
 interface Props {
   image: string;
   title: string;
   link: string;
+  description: string;
 }
 
-const { image, title, link } = Astro.props;
+const { image, title, link, description } = Astro.props;
 ---
 
 <div class="flex relative group shadow-lg rounded-xl flex-1">
-  <a href={link} class="overflow-hidden rounded-lg">
+  <a href={link} class="overflow-hidden rounded-lg hide-1">
     <img src={image} alt={title} class="w-72 h-64 object-cover hover-effect" />
   </a>
   <div class="ml-4">
-    <h2 class="text-4xl">{title}</h2>
-    <slot />
+    <h2 class="text-4xl hide-2">{title}</h2>
+
+    <Spacer size="h-6" />
+
+    <p class="text-lg hide-3" style="max-width: 40vw;">
+      {description}
+    </p>
   </div>
 </div>

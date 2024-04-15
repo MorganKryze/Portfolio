@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import "../animations/hide.astro";
 
 import Layout from "../layouts/Layout.astro";
 import Spacer from "../components/Spacer.astro";
@@ -7,7 +8,7 @@ import Spacer from "../components/Spacer.astro";
 
 <Layout currentPage="tos">
   <main class="text-white">
-    <section class="h-screen container mx-auto px-4 py-8">
+    <section class="container mx-auto px-4 py-8">
       <Spacer size="h-24" />
 
       <h1 class="text-4xl font-bold">Terms of Service</h1>
@@ -15,14 +16,14 @@ import Spacer from "../components/Spacer.astro";
         Last updated: {new Date().toLocaleDateString()}
       </h2>
 
-      <p class="mt-8 text-lg">
+      <p class="mt-8 text-lg hide-1">
         The following terms and conditions govern all use of this website and
         all content, services, and products available at or through the website.
       </p>
 
-      <h2 class="mt-8 text-2xl font-bold">Intellectual Property</h2>
+      <h2 class="mt-8 text-2xl font-bold hide-2">Intellectual Property</h2>
 
-      <p class="mt-4 text-lg">
+      <p class="mt-4 text-lg hide-2">
         This website and its original content, features, and functionality are
         owned by me and are protected by international copyright, trademark,
         patent, trade secret, and other intellectual property or proprietary
@@ -31,15 +32,17 @@ import Spacer from "../components/Spacer.astro";
         permission from me.
       </p>
 
-      <h2 class="mt-8 text-2xl font-bold">Contact Information</h2>
+      <h2 class="mt-8 text-2xl font-bold hide-3">Contact Information</h2>
 
-      <p class="mt-4 text-lg">
+      <p class="mt-4 text-lg hide-3">
         For any inquiries or questions regarding these Terms of Service, please
         contact me via email at <a
           href="mailto:morgan@kodelab.fr"
           style="color: hsl(195, 60%, 60%);">morgan@kodelab.fr</a
         >.
       </p>
+
+      <Spacer size="h-72" />
     </section>
   </main>
 </Layout>
