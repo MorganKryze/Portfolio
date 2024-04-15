@@ -1,27 +1,11 @@
 ---
 import "../styles/global.css";
+import "../animations/hide.astro";
 
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 import Spacer from "../components/Spacer.astro";
 ---
-
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  });
-
-  const elements = document.querySelectorAll(".hide");
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
-</script>
 
 <Layout currentPage="home">
   <main class="text-white">

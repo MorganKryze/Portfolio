@@ -1,0 +1,21 @@
+---
+import "../styles/global.css";
+
+interface Props {
+  image: string;
+  title: string;
+  link: string;
+}
+
+const { image, title, link } = Astro.props;
+---
+
+<div class="flex relative group shadow-lg rounded-xl flex-1">
+  <a href={link} class="overflow-hidden rounded-lg">
+    <img src={image} alt={title} class="w-72 h-64 object-cover hover-effect" />
+  </a>
+  <div class="ml-4">
+    <h2 class="text-4xl">{title}</h2>
+    <slot />
+  </div>
+</div>
