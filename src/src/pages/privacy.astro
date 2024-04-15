@@ -1,5 +1,5 @@
 ---
-import "@fontsource/orbitron";
+import "../styles/global.css";
 
 import Spacer from "../components/Spacer.astro";
 import Layout from "../layouts/Layout.astro";
@@ -10,8 +10,10 @@ import Layout from "../layouts/Layout.astro";
     <section class="h-screen container mx-auto px-4 py-8">
       <Spacer size="h-24" />
 
-    <h1 class="text-4xl font-bold">Privacy Policy</h1>
-    <h2 class="text-xl text-gray-400 mt-2">Last updated: {new Date().toLocaleDateString()}</h2>
+      <h1 class="text-4xl font-bold">Privacy Policy</h1>
+      <h2 class="text-xl text-gray-400 mt-2">
+        Last updated: {new Date().toLocaleDateString()}
+      </h2>
 
       <p class="mt-8 text-lg">
         This website is a personal portfolio and does not collect any personal

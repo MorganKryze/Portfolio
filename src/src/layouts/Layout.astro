@@ -1,4 +1,6 @@
 ---
+import "../styles/global.css";
+
 import Footer from "../components/Footer.astro";
 import Nav from "../components/Nav.astro";
 
@@ -17,14 +19,6 @@ const { currentPage } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Photographolio</title>
-    <style>
-      .bg-image {
-        background-image: url("/img/background.jpg");
-        background-color: black;
-        background-size: cover;
-        background-position: center;
-      }
-    </style>
   </head>
   <body class="bg-image">
     <Nav currentPage={currentPage} />

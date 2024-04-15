@@ -1,0 +1,32 @@
+/* main.css */
+
+.bg-image {
+    background-image: url("/img/background.jpg");
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.hide {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(40px);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(10px);
+}
+
+@media (prefers-reduced-motion) {
+    .hide {
+        transition: none;
+    }
+}
+
+.underline-lower {
+    border-bottom: 2px solid currentColor;
+    transform: translateY(2px);
+}
