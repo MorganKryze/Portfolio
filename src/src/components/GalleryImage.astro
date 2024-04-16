@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+import "../animations/hide.astro";
+
+interface Props {
+  image: string;
+}
+
+const { image } = Astro.props;
+---
+
+<img
+  src={image}
+  alt="gallery"
+  class="w-full object-cover rounded-md hide-2"
+  loading="lazy"
+/>
