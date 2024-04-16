@@ -2,90 +2,82 @@
 import "../../styles/global.css";
 import "../../animations/hide.astro";
 
-import Layout from "../../layouts/Layout.astro";
-import Spacer from "../../components/Spacer.astro";
+import CollectionLayout from "../../layouts/CollectionLayout.astro";
 import GalleryImage from "../../components/GalleryImage.astro";
 ---
 
-<Layout currentPage="collections">
-  <main class="text-white min-h-screen">
-    <section class="container mx-auto px-4 py-8">
-      <Spacer size="h-24" />
-      <h1 class="text-4xl font-bold">France</h1>
-      <Spacer size="h-8" />
-      <p class="text-lg text-gray-400 hide-1" style="max-width: 70vw;">
-        France is my native country. But every time I go into a new region, I
-        feel like I am discovering a new country. Although I keep a special
-        place in my heart for Brittany. Through all my collections, you may
-        understand my strong connection to the sea that I learned to love from
-        an early age. I hope that you will envoy my work as much as I do!
-      </p>
-
-      <Spacer size="h-16" />
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="flex flex-col gap-6">
-          <GalleryImage image="/img/france/im3.jpg" />
-          <GalleryImage image="/img/france/im7.jpg" />
-          <GalleryImage image="/img/france/im21.jpg" />
-          <GalleryImage image="/img/france/im8.jpg" />
-          <GalleryImage image="/img/france/im26.jpg" />
-          <GalleryImage image="/img/france/im17.jpg" />
-          <GalleryImage image="/img/france/im20.jpg" />
-          <GalleryImage image="/img/france/im13.jpg" />
-          <GalleryImage image="/img/france/im44.jpg" />
-          <GalleryImage image="/img/france/im38.jpg" />
-          <GalleryImage image="/img/france/im53.jpg" />
-          <GalleryImage image="/img/france/im34.jpg" />
-          <GalleryImage image="/img/france/im40.jpg" />
-          <GalleryImage image="/img/france/im29.jpg" />
-          <GalleryImage image="/img/france/im43.jpg" />
-          <GalleryImage image="/img/france/im47.jpg" />
-          <GalleryImage image="/img/france/im36.jpg" />
-          <GalleryImage image="/img/france/im55.jpg" />
-        </div>
-        <div class="flex flex-col gap-6">
-          <GalleryImage image="/img/france/im5.jpg" />
-          <GalleryImage image="/img/france/im6.jpg" />
-          <GalleryImage image="/img/france/im2.jpg" />
-          <GalleryImage image="/img/france/im9.jpg" />
-          <GalleryImage image="/img/france/im45.jpg" />
-          <GalleryImage image="/img/france/im22.jpg" />
-          <GalleryImage image="/img/france/im18.jpg" />
-          <GalleryImage image="/img/france/im32.jpg" />
-          <GalleryImage image="/img/france/im33.jpg" />
-          <GalleryImage image="/img/france/im14.jpg" />
-          <GalleryImage image="/img/france/im15.jpg" />
-          <GalleryImage image="/img/france/im52.jpg" />
-          <GalleryImage image="/img/france/im27.jpg" />
-          <GalleryImage image="/img/france/im31.jpg" />
-          <GalleryImage image="/img/france/im42.jpg" />
-          <GalleryImage image="/img/france/im54.jpg" />
-          <GalleryImage image="/img/france/im37.jpg" />
-          <GalleryImage image="/img/france/im35.jpg" />
-          <GalleryImage image="/img/france/im51.jpg" />
-        </div>
-        <div class="flex flex-col gap-6">
-          <GalleryImage image="/img/france/im4.jpg" />
-          <GalleryImage image="/img/france/im1.jpg" />
-          <GalleryImage image="/img/france/im23.jpg" />
-          <GalleryImage image="/img/france/im10.jpg" />
-          <GalleryImage image="/img/france/im24.jpg" />
-          <GalleryImage image="/img/france/im11.jpg" />
-          <GalleryImage image="/img/france/im25.jpg" />
-          <GalleryImage image="/img/france/im19.jpg" />
-          <GalleryImage image="/img/france/im12.jpg" />
-          <GalleryImage image="/img/france/im46.jpg" />
-          <GalleryImage image="/img/france/im49.jpg" />
-          <GalleryImage image="/img/france/im50.jpg" />
-          <GalleryImage image="/img/france/im16.jpg" />
-          <GalleryImage image="/img/france/im39.jpg" />
-          <GalleryImage image="/img/france/im41.jpg" />
-          <GalleryImage image="/img/france/im30.jpg" />
-          <GalleryImage image="/img/france/im48.jpg" />
-          <GalleryImage image="/img/france/im28.jpg" />
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>
+<CollectionLayout
+  currentPage="collections"
+  title="France"
+  description={`France is my native country. But every time I go into a new region, I
+  feel like I am discovering a new country. Although I keep a special
+  place in my heart for Brittany. Through all my collections, you may
+  understand my strong connection to the sea that I learned to love from
+  an early age. I hope that you will envoy my work as much as I do!`}
+  previousCollectionTitle="Ireland"
+  previousCollectionLink="ireland"
+  nextCollectionTitle="Sardegna"
+  nextCollectionLink="sardegna"
+>
+  <div id="Column-Left" class="flex flex-col gap-6">
+    <GalleryImage image="/img/france/im3.jpg" />
+    <GalleryImage image="/img/france/im7.jpg" />
+    <GalleryImage image="/img/france/im21.jpg" />
+    <GalleryImage image="/img/france/im8.jpg" />
+    <GalleryImage image="/img/france/im26.jpg" />
+    <GalleryImage image="/img/france/im17.jpg" />
+    <GalleryImage image="/img/france/im20.jpg" />
+    <GalleryImage image="/img/france/im13.jpg" />
+    <GalleryImage image="/img/france/im44.jpg" />
+    <GalleryImage image="/img/france/im38.jpg" />
+    <GalleryImage image="/img/france/im53.jpg" />
+    <GalleryImage image="/img/france/im34.jpg" />
+    <GalleryImage image="/img/france/im40.jpg" />
+    <GalleryImage image="/img/france/im29.jpg" />
+    <GalleryImage image="/img/france/im43.jpg" />
+    <GalleryImage image="/img/france/im47.jpg" />
+    <GalleryImage image="/img/france/im36.jpg" />
+    <GalleryImage image="/img/france/im55.jpg" />
+  </div>
+  <div id="Column-Center" class="flex flex-col gap-6">
+    <GalleryImage image="/img/france/im5.jpg" />
+    <GalleryImage image="/img/france/im6.jpg" />
+    <GalleryImage image="/img/france/im2.jpg" />
+    <GalleryImage image="/img/france/im9.jpg" />
+    <GalleryImage image="/img/france/im45.jpg" />
+    <GalleryImage image="/img/france/im22.jpg" />
+    <GalleryImage image="/img/france/im18.jpg" />
+    <GalleryImage image="/img/france/im32.jpg" />
+    <GalleryImage image="/img/france/im33.jpg" />
+    <GalleryImage image="/img/france/im14.jpg" />
+    <GalleryImage image="/img/france/im15.jpg" />
+    <GalleryImage image="/img/france/im52.jpg" />
+    <GalleryImage image="/img/france/im27.jpg" />
+    <GalleryImage image="/img/france/im31.jpg" />
+    <GalleryImage image="/img/france/im42.jpg" />
+    <GalleryImage image="/img/france/im54.jpg" />
+    <GalleryImage image="/img/france/im37.jpg" />
+    <GalleryImage image="/img/france/im35.jpg" />
+    <GalleryImage image="/img/france/im51.jpg" />
+  </div>
+  <div id="Column-Right" class="flex flex-col gap-6">
+    <GalleryImage image="/img/france/im4.jpg" />
+    <GalleryImage image="/img/france/im1.jpg" />
+    <GalleryImage image="/img/france/im23.jpg" />
+    <GalleryImage image="/img/france/im10.jpg" />
+    <GalleryImage image="/img/france/im24.jpg" />
+    <GalleryImage image="/img/france/im11.jpg" />
+    <GalleryImage image="/img/france/im25.jpg" />
+    <GalleryImage image="/img/france/im19.jpg" />
+    <GalleryImage image="/img/france/im12.jpg" />
+    <GalleryImage image="/img/france/im46.jpg" />
+    <GalleryImage image="/img/france/im49.jpg" />
+    <GalleryImage image="/img/france/im50.jpg" />
+    <GalleryImage image="/img/france/im16.jpg" />
+    <GalleryImage image="/img/france/im39.jpg" />
+    <GalleryImage image="/img/france/im41.jpg" />
+    <GalleryImage image="/img/france/im30.jpg" />
+    <GalleryImage image="/img/france/im48.jpg" />
+    <GalleryImage image="/img/france/im28.jpg" />
+  </div>
+</CollectionLayout>

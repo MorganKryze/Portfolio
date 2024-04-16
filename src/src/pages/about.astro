@@ -3,11 +3,11 @@ import "../styles/global.css";
 import "../animations/hide.astro";
 
 import Spacer from "../components/Spacer.astro";
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 ---
 
-<Layout currentPage="about">
+<MainLayout currentPage="about">
   <main class="text-white min-h-screen">
     <section class="container mx-auto px-4 py-8">
       <Spacer size="h-16" />
@@ -57,4 +57,4 @@ import { Image } from "astro:assets";
       <Spacer size="h-96" />
     </section>
   </main>
-</Layout>
+</MainLayout>

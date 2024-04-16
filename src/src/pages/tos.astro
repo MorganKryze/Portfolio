@@ -2,11 +2,11 @@
 import "../styles/global.css";
 import "../animations/hide.astro";
 
-import Layout from "../layouts/Layout.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import Spacer from "../components/Spacer.astro";
 ---
 
-<Layout currentPage="tos">
+<MainLayout currentPage="tos">
   <main class="text-white min-h-screen">
     <section class="container mx-auto px-4 py-8">
       <Spacer size="h-24" />
@@ -45,4 +45,4 @@ import Spacer from "../components/Spacer.astro";
       <Spacer size="h-72" />
     </section>
   </main>
-</Layout>
+</MainLayout>

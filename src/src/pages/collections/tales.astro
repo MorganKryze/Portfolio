@@ -2,59 +2,51 @@
 import "../../styles/global.css";
 import "../../animations/hide.astro";
 
-import Spacer from "../../components/Spacer.astro";
-import Layout from "../../layouts/Layout.astro";
+import CollectionLayout from "../../layouts/CollectionLayout.astro";
 import GalleryImage from "../../components/GalleryImage.astro";
 ---
 
-<Layout currentPage="collections">
-  <main class="text-white min-h-screen">
-    <section class="container mx-auto px-4 py-8">
-      <Spacer size="h-24" />
-      <h1 class="text-4xl font-bold">Tales of Rototo</h1>
-      <Spacer size="h-8" />
-      <p class="text-lg text-gray-400 hide-1" style="max-width: 70vw;">
-        Rototo is a funny name for an anime character from the anime "My
-        neighbor Totoro". This figurine is a gift I keep close to me. I like to
-        take it with me when I travel and take pictures of it in different
-        places to create a disjointed story. I truly like his adorable face.
-      </p>
-
-      <Spacer size="h-16" />
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="flex flex-col gap-6">
-          <GalleryImage image="/img/rototo/im2.jpg" />
-          <GalleryImage image="/img/rototo/im17.jpg" />
-          <GalleryImage image="/img/rototo/im16.jpg" />
-          <GalleryImage image="/img/rototo/im14.jpg" />
-          <GalleryImage image="/img/rototo/im6.jpg" />
-          <GalleryImage image="/img/rototo/im5.jpg" />
-          <GalleryImage image="/img/rototo/im10.jpg" />
-          <GalleryImage image="/img/rototo/im24.jpg" />
-        </div>
-        <div class="flex flex-col gap-6">
-          <GalleryImage image="/img/rototo/im18.jpg" />
-          <GalleryImage image="/img/rototo/im20.jpg" />
-          <GalleryImage image="/img/rototo/im22.jpg" />
-          <GalleryImage image="/img/rototo/im23.jpg" />
-          <GalleryImage image="/img/rototo/im15.jpg" />
-          <GalleryImage image="/img/rototo/im8.jpg" />
-          <GalleryImage image="/img/rototo/im12.jpg" />
-          <GalleryImage image="/img/rototo/im3.jpg" />
-        </div>
-        <div class="flex flex-col gap-6">
-          <GalleryImage image="/img/rototo/im1.jpg" />
-          <GalleryImage image="/img/rototo/im19.jpg" />
-          <GalleryImage image="/img/rototo/im21.jpg" />
-          <GalleryImage image="/img/rototo/im13.jpg" />
-          <GalleryImage image="/img/rototo/im7.jpg" />
-          <GalleryImage image="/img/rototo/im9.jpg" />
-          <GalleryImage image="/img/rototo/im11.jpg" />
-          <GalleryImage image="/img/rototo/im4.jpg" />
-          <GalleryImage image="/img/rototo/im25.jpg" />
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>
+<CollectionLayout
+  currentPage="collections"
+  title="Tales of Rototo"
+  description={`Rototo is a funny name for an anime character from the anime "My
+  neighbor Totoro". This figurine is a gift I keep close to me. I like to
+  take it with me when I travel and take pictures of it in different
+  places to create a disjointed story. I truly like his adorable face.`}
+  previousCollectionTitle="Ireland"
+  previousCollectionLink="ireland"
+  nextCollectionTitle="France"
+  nextCollectionLink="france"
+>
+  <div class="flex flex-col gap-6">
+    <GalleryImage image="/img/rototo/im2.jpg" />
+    <GalleryImage image="/img/rototo/im17.jpg" />
+    <GalleryImage image="/img/rototo/im16.jpg" />
+    <GalleryImage image="/img/rototo/im14.jpg" />
+    <GalleryImage image="/img/rototo/im6.jpg" />
+    <GalleryImage image="/img/rototo/im10.jpg" />
+    <GalleryImage image="/img/rototo/im5.jpg" />
+    <GalleryImage image="/img/rototo/im24.jpg" />
+  </div>
+  <div class="flex flex-col gap-6">
+    <GalleryImage image="/img/rototo/im18.jpg" />
+    <GalleryImage image="/img/rototo/im20.jpg" />
+    <GalleryImage image="/img/rototo/im22.jpg" />
+    <GalleryImage image="/img/rototo/im23.jpg" />
+    <GalleryImage image="/img/rototo/im15.jpg" />
+    <GalleryImage image="/img/rototo/im8.jpg" />
+    <GalleryImage image="/img/rototo/im12.jpg" />
+    <GalleryImage image="/img/rototo/im3.jpg" />
+  </div>
+  <div class="flex flex-col gap-6">
+    <GalleryImage image="/img/rototo/im1.jpg" />
+    <GalleryImage image="/img/rototo/im19.jpg" />
+    <GalleryImage image="/img/rototo/im21.jpg" />
+    <GalleryImage image="/img/rototo/im13.jpg" />
+    <GalleryImage image="/img/rototo/im7.jpg" />
+    <GalleryImage image="/img/rototo/im9.jpg" />
+    <GalleryImage image="/img/rototo/im11.jpg" />
+    <GalleryImage image="/img/rototo/im4.jpg" />
+    <GalleryImage image="/img/rototo/im25.jpg" />
+  </div>
+</CollectionLayout>

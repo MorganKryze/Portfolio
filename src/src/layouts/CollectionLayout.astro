@@ -1,0 +1,114 @@
+---
+import "../styles/global.css";
+
+import Footer from "../components/Footer.astro";
+import Nav from "../components/Nav.astro";
+import GalleryImage from "../components/GalleryImage.astro";
+import Spacer from "../components/Spacer.astro";
+
+interface Props {
+  currentPage: string;
+  title: string;
+  description: string;
+  previousCollectionTitle: string;
+  previousCollectionLink: string;
+  nextCollectionTitle: string;
+  nextCollectionLink: string;
+}
+
+const {
+  currentPage,
+  title,
+  description,
+  previousCollectionTitle,
+  previousCollectionLink,
+  nextCollectionTitle,
+  nextCollectionLink,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photographolio</title>
+    <meta property="og:title" content="Photographolio" />
+    <meta name="description" content="A space-ial photography portfolio" />
+    <meta
+      property="og:description"
+      content="A space-ial photography portfolio"
+    />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/MorganKryze/Portfolio/main/presentation.jpg"
+    />
+    <!-- TODO: replace blank with real URL -->
+    <meta property="og:url" content="" />
+  </head>
+  <body class="bg-image">
+    <Nav currentPage={currentPage} />
+
+    <main class="text-white min-h-screen">
+      <section class="container mx-auto px-4 py-8">
+        <Spacer size="h-24" />
+
+        <h1 class="text-4xl font-bold">{title}</h1>
+
+        <Spacer size="h-8" />
+
+        <p class="text-lg text-gray-400 hide-1" style="max-width: 70vw;">
+          {description}
+        </p>
+
+        <Spacer size="h-16" />
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <slot />
+        </div>
+
+        <Spacer size="h-16" />
+
+        <div
+          class="bottom-0 left-0 right-0 p-4 flex items-center justify-between"
+        >
+          <a
+            href={`/collections/${previousCollectionLink}`}
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium flex items-center"
+          >
+            <img
+              src="/icons/chevron-left.svg"
+              alt="Previous"
+              class="h-5 w-5 mr-2"
+            />
+            See {previousCollectionTitle}
+          </a>
+
+          <p class="text-gray-300 text-xl font-medium">
+            Feel free to <a
+              href="mailto:morgan@kodelab.fr"
+              class="hover:underline">reach out to me</a
+            > for any inquiries.
+          </p>
+
+          <a
+            href={`/collections/${nextCollectionLink}`}
+            class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium flex items-center"
+          >
+            See {nextCollectionTitle}
+            <img
+              src="/icons/chevron-right.svg"
+              alt="Next"
+              class="h-5 w-5 ml-2"
+            />
+          </a>
+        </div>
+
+        <Spacer size="h-16" />
+      </section>
+    </main>
+
+    <Footer />
+  </body>
+</html>
