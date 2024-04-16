@@ -1,0 +1,60 @@
+---
+import "../../styles/global.css";
+import "../../animations/hide.astro";
+
+import Layout from "../../layouts/Layout.astro";
+import Spacer from "../../components/Spacer.astro";
+---
+
+<Layout currentPage="collections">
+  <main class="text-white min-h-screen">
+    <section class="container mx-auto px-4 py-8">
+      <Spacer size="h-24" />
+      <h1 class="text-4xl font-bold">France</h1>
+
+      <Spacer size="h-16" />
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="flex flex-col gap-4">
+          <img
+            src="/img/france/im1.jpg"
+            alt="Description of image 1"
+            class="w-full object-cover rounded-md hide-1"
+            loading="eager"
+          />
+          <img
+            src="/img/france/im2.jpg"
+            alt="Description of image 2"
+            class="w-full object-cover rounded-md hide-2"
+          />
+        </div>
+        <div class="flex flex-col gap-4">
+          <img
+            src="/img/france/im3.jpg"
+            alt="Description of image 3"
+            class="w-full object-cover rounded-md hide-1"
+            loading="eager"
+          />
+          <img
+            src="/img/france/im4.jpg"
+            alt="Description of image 4"
+            class="w-full object-cover rounded-md hide-2"
+          />
+        </div>
+        <div class="flex flex-col gap-4">
+          <img
+            src="/img/france/im5.jpg"
+            alt="Description of image 5"
+            class="w-full object-cover rounded-md hide-1"
+            loading="eager"
+          />
+          <img
+            src="/img/france/im6.jpg"
+            alt="Description of image 6"
+            class="w-full object-cover rounded-md hide-2"
+          />
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
