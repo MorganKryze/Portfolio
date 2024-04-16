@@ -43,37 +43,38 @@ const { currentPage } = Astro.props;
               >About me</a
             >
             <div class="group relative">
-              <a
+            <a
                 href="/collections"
                 class={`flex items-center text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium ${currentPage === "collections" ? "underline-lower" : ""}`}
-              >
+            >
                 Collections
                 <Image
-                  src="/icons/chevron-down.svg"
-                  alt="Collections Icon"
-                  width={20}
-                  height={20}
-                  loading="eager"
+                    src="/icons/chevron-down.svg"
+                    alt="Collections Icon"
+                    width={30}
+                    height={30}
+                    loading="eager"
+                    class="pl-2"
                 />
-              </a>
-              <div
-                class="absolute left-0 w-48 mt-2 p-2 bg-gray-700 text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-              >
+            </a>
+            <div
+                class="absolute left-0 w-full mt-2 p-2 bg-gray-700 text-white rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+            >
                 <a
-                  href="/collections/france"
-                  class="block px-2 py-1 hover:bg-gray-800 rounded-md">France</a
+                    href="/collections/france"
+                    class="block px-2 py-1 hover:bg-gray-800 rounded-md w-full text-left">France</a
                 >
                 <a
-                  href="/collections/sardegna"
-                  class="block px-2 py-1 hover:bg-gray-800 rounded-md"
-                  >Sardegna</a
+                    href="/collections/sardegna"
+                    class="block px-2 py-1 hover:bg-gray-800 rounded-md w-full text-left"
+                    >Sardegna</a
                 >
                 <a
-                  href="/collections/ireland"
-                  class="block px-2 py-1 hover:bg-gray-800 rounded-md"
-                  >Ireland</a
+                    href="/collections/ireland"
+                    class="block px-2 py-1 hover:bg-gray-800 rounded-md w-full text-left"
+                    >Ireland</a
                 >
-              </div>
+            </div>
             </div>
           </div>
         </div>
