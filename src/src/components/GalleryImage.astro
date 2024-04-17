@@ -4,14 +4,15 @@ import "../animations/hide.astro";
 
 interface Props {
   image: string;
+  loading?: 'lazy' | 'eager';
 }
 
-const { image } = Astro.props;
+const { image, loading = 'lazy' } = Astro.props;
 ---
 
 <img
   src={`/Portfolio${image}`}
   alt="gallery"
   class="w-full object-cover rounded-md hide-2"
-  loading="lazy"
+  loading={loading}
 />
