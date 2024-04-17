@@ -2,59 +2,20 @@
 import "../../styles/global.css";
 import "../../animations/hide.astro";
 
-import Spacer from "../../components/Spacer.astro";
-import Layout from "../../layouts/MainLayout.astro";
+import CollectionLayout from "../../layouts/CollectionLayout.astro";
+import GalleryImage from "../../components/GalleryImage.astro";
 ---
 
-<Layout currentPage="collections">
-  <main class="text-white min-h-screen">
-    <section class="container mx-auto px-4 py-8">
-      <Spacer size="h-24" />
-      <h1 class="text-4xl font-bold">Ireland</h1>
-
-      <Spacer size="h-16" />
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="flex flex-col gap-4">
-          <img
-            src="/img/france/im1.jpg"
-            alt="Left-im1"
-            class="w-full object-cover rounded-md hide-1"
-            loading="eager"
-          />
-          <img
-            src="/img/france/im2.jpg"
-            alt="Left-im2"
-            class="w-full object-cover rounded-md hide-2"
-          />
-        </div>
-        <div class="flex flex-col gap-4">
-          <img
-            src="/img/france/im3.jpg"
-            alt="Center-im1"
-            class="w-full object-cover rounded-md hide-1"
-            loading="eager"
-          />
-          <img
-            src="/img/france/im4.jpg"
-            alt="Center-im2"
-            class="w-full object-cover rounded-md hide-2"
-          />
-        </div>
-        <div class="flex flex-col gap-4">
-          <img
-            src="/img/france/im5.jpg"
-            alt="Rigth-im1"
-            class="w-full object-cover rounded-md hide-1"
-            loading="eager"
-          />
-          <img
-            src="/img/france/im6.jpg"
-            alt="Rigth-im2"
-            class="w-full object-cover rounded-md hide-2"
-          />
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>
+<CollectionLayout
+  currentPage="collections"
+  title="Ireland"
+  description={`Soon..`}
+  previousCollectionTitle="Sardegna"
+  previousCollectionLink="sardegna"
+  nextCollectionTitle="France"
+  nextCollectionLink="france"
+>
+  <div id="Column-Left" class="flex flex-col gap-6"></div>
+  <div id="Column-Center" class="flex flex-col gap-6"></div>
+  <div id="Column-Right" class="flex flex-col gap-6"></div>
+</CollectionLayout>
