@@ -23,7 +23,11 @@ const { currentPage } = Astro.props;
       property="og:description"
       content="A space-ial photography portfolio"
     />
-    <link rel="icon" type="image/svg+xml" href="https://raw.githubusercontent.com/MorganKryze/Portfolio/main/src/public/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="https://raw.githubusercontent.com/MorganKryze/Portfolio/main/src/public/favicon.svg"
+    />
     <meta
       property="og:image"
       content="https://raw.githubusercontent.com/MorganKryze/Portfolio/main/presentation.jpg"
@@ -36,4 +40,30 @@ const { currentPage } = Astro.props;
     <slot />
     <Footer />
   </body>
+  
+  <script>
+    const setFavicon = (theme: string) => {
+      const link: HTMLLinkElement | null =
+        document.querySelector('link[rel="icon"]');
+      if (link) {
+        if (theme === "dark") {
+          link.href = "/Portfolio/dark-favicon.svg";
+        } else {
+          link.href = "/Portfolio/light-favicon.svg";
+        }
+      }
+    };
+
+    window
+      .matchMedia("(prefers-color-scheme: dark)")
+      .addEventListener("change", (e) => {
+        setFavicon(e.matches ? "dark" : "light");
+      });
+
+    setFavicon(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light"
+    );
+  </script>
 </html>
