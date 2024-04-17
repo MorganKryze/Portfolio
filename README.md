@@ -30,21 +30,15 @@ cd Portfolio/src/
 
 ### Build & Run
 
-To run the project locally, run the following command:
+Run the following command:
 
 ```bash
 pnpm run dev
 ```
 
-To build the project, run the following command:
-
-```bash
-pnpm run build
-```
-
 ### Deployment
 
-...
+To deploy the project, you can follow the instructions provided in the [Astro documentation](https://docs.astro.build/en/guides/deploy/github/).
 
 ## License
 
