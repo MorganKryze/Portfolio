@@ -2,59 +2,118 @@
 import "../../styles/global.css";
 import "../../animations/hide.astro";
 
-import Spacer from "../../components/Spacer.astro";
-import Layout from "../../layouts/MainLayout.astro";
+import GalleryImage from "../../components/GalleryImage.astro";
+import CollectionLayout from "../../layouts/CollectionLayout.astro";
 ---
 
-<Layout currentPage="collections">
-  <main class="text-white min-h-screen">
-    <section class="container mx-auto px-4 py-8">
-      <Spacer size="h-24" />
-      <h1 class="text-4xl font-bold">Sardegna</h1>
+<CollectionLayout
+  currentPage="collections"
+  title="Sardegna"
+  description={`Sardegna is a beautiful island in the Mediterranean Sea. I had the
+    chance to visit it for a few days and travel across the island. I saw from the 
+    beautiful beaches to the mountains, and I was seduced by the genuine beauty of 
+    endless sky depict the horizon.`}
+  previousCollectionTitle="France"
+  previousCollectionLink="france"
+  nextCollectionTitle="Ireland"
+  nextCollectionLink="ireland"
+>
+  <div id="Column-Left" class="flex flex-col gap-6">
+    <GalleryImage image="/img/sardegna/im38.jpg" />
+    <GalleryImage image="/img/sardegna/im59.jpg" />
+    <GalleryImage image="/img/sardegna/im20.jpg" />
+    <GalleryImage image="/img/sardegna/im18.jpg" />
+    <GalleryImage image="/img/sardegna/im37.jpg" />
 
-      <Spacer size="h-16" />
+    <GalleryImage image="/img/sardegna/im3.jpg" />
+  </div>
+  <div id="Column-Center" class="flex flex-col gap-6">
+    <GalleryImage image="/img/sardegna/im45.jpg" />
+    <GalleryImage image="/img/sardegna/im29.jpg" />
+    <GalleryImage image="/img/sardegna/im42.jpg" />
+    <GalleryImage image="/img/sardegna/im17.jpg" />
+    <GalleryImage image="/img/sardegna/im27.jpg" />
+    <GalleryImage image="/img/sardegna/im36.jpg" />
+  </div>
+  <div id="Column-Right" class="flex flex-col gap-6">
+    <GalleryImage image="/img/sardegna/im39.jpg" />
+    <GalleryImage image="/img/sardegna/im15.jpg" />
+    <GalleryImage image="/img/sardegna/im19.jpg" />
+    <GalleryImage image="/img/sardegna/im16.jpg" />
+    <GalleryImage image="/img/sardegna/im28.jpg" />
+  </div>
+</CollectionLayout>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="flex flex-col gap-4">
-          <img
-            src="/img/france/im1.jpg"
-            alt="Left-im1"
-            class="w-full object-cover rounded-md hide-1"
-            loading="eager"
-          />
-          <img
-            src="/img/france/im2.jpg"
-            alt="Left-im2"
-            class="w-full object-cover rounded-md hide-2"
-          />
-        </div>
-        <div class="flex flex-col gap-4">
-          <img
-            src="/img/france/im3.jpg"
-            alt="Center-im1"
-            class="w-full object-cover rounded-md hide-1"
-            loading="eager"
-          />
-          <img
-            src="/img/france/im4.jpg"
-            alt="Center-im2"
-            class="w-full object-cover rounded-md hide-2"
-          />
-        </div>
-        <div class="flex flex-col gap-4">
-          <img
-            src="/img/france/im5.jpg"
-            alt="Rigth-im1"
-            class="w-full object-cover rounded-md hide-1"
-            loading="eager"
-          />
-          <img
-            src="/img/france/im6.jpg"
-            alt="Rigth-im2"
-            class="w-full object-cover rounded-md hide-2"
-          />
-        </div>
-      </div>
-    </section>
-  </main>
-</Layout>
+<GalleryImage image="/img/sardegna/im1.jpg" />
+<GalleryImage image="/img/sardegna/im2.jpg" />
+<GalleryImage image="/img/sardegna/im4.jpg" />
+<GalleryImage image="/img/sardegna/im5.jpg" />
+<GalleryImage image="/img/sardegna/im6.jpg" />
+<GalleryImage image="/img/sardegna/im7.jpg" />
+<GalleryImage image="/img/sardegna/im8.jpg" />
+<GalleryImage image="/img/sardegna/im9.jpg" />
+<GalleryImage image="/img/sardegna/im10.jpg" />
+<GalleryImage image="/img/sardegna/im11.jpg" />
+<GalleryImage image="/img/sardegna/im12.jpg" />
+<GalleryImage image="/img/sardegna/im13.jpg" />
+<GalleryImage image="/img/sardegna/im14.jpg" />
+<GalleryImage image="/img/sardegna/im21.jpg" />
+<GalleryImage image="/img/sardegna/im22.jpg" />
+<GalleryImage image="/img/sardegna/im23.jpg" />
+<GalleryImage image="/img/sardegna/im24.jpg" />
+<GalleryImage image="/img/sardegna/im25.jpg" />
+<GalleryImage image="/img/sardegna/im26.jpg" />
+<GalleryImage image="/img/sardegna/im30.jpg" />
+<GalleryImage image="/img/sardegna/im31.jpg" />
+<GalleryImage image="/img/sardegna/im32.jpg" />
+<GalleryImage image="/img/sardegna/im33.jpg" />
+<GalleryImage image="/img/sardegna/im34.jpg" />
+<GalleryImage image="/img/sardegna/im35.jpg" />
+<GalleryImage image="/img/sardegna/im40.jpg" />
+<GalleryImage image="/img/sardegna/im41.jpg" />
+<GalleryImage image="/img/sardegna/im43.jpg" />
+<GalleryImage image="/img/sardegna/im44.jpg" />
+<GalleryImage image="/img/sardegna/im46.jpg" />
+<GalleryImage image="/img/sardegna/im47.jpg" />
+<GalleryImage image="/img/sardegna/im48.jpg" />
+<GalleryImage image="/img/sardegna/im49.jpg" />
+<GalleryImage image="/img/sardegna/im50.jpg" />
+<GalleryImage image="/img/sardegna/im51.jpg" />
+<GalleryImage image="/img/sardegna/im52.jpg" />
+<GalleryImage image="/img/sardegna/im53.jpg" />
+<GalleryImage image="/img/sardegna/im54.jpg" />
+<GalleryImage image="/img/sardegna/im55.jpg" />
+<GalleryImage image="/img/sardegna/im56.jpg" />
+<GalleryImage image="/img/sardegna/im57.jpg" />
+<GalleryImage image="/img/sardegna/im58.jpg" />
+<GalleryImage image="/img/sardegna/im60.jpg" />
+<GalleryImage image="/img/sardegna/im61.jpg" />
+<GalleryImage image="/img/sardegna/im62.jpg" />
+<GalleryImage image="/img/sardegna/im63.jpg" />
+<GalleryImage image="/img/sardegna/im64.jpg" />
+<GalleryImage image="/img/sardegna/im65.jpg" />
+<GalleryImage image="/img/sardegna/im66.jpg" />
+<GalleryImage image="/img/sardegna/im67.jpg" />
+<GalleryImage image="/img/sardegna/im68.jpg" />
+<GalleryImage image="/img/sardegna/im69.jpg" />
+<GalleryImage image="/img/sardegna/im70.jpg" />
+<GalleryImage image="/img/sardegna/im71.jpg" />
+<GalleryImage image="/img/sardegna/im72.jpg" />
+<GalleryImage image="/img/sardegna/im73.jpg" />
+<GalleryImage image="/img/sardegna/im74.jpg" />
+<GalleryImage image="/img/sardegna/im75.jpg" />
+<GalleryImage image="/img/sardegna/im76.jpg" />
+<GalleryImage image="/img/sardegna/im77.jpg" />
+<GalleryImage image="/img/sardegna/im78.jpg" />
+<GalleryImage image="/img/sardegna/im79.jpg" />
+<GalleryImage image="/img/sardegna/im80.jpg" />
+<GalleryImage image="/img/sardegna/im81.jpg" />
+<GalleryImage image="/img/sardegna/im82.jpg" />
+<GalleryImage image="/img/sardegna/im83.jpg" />
+<GalleryImage image="/img/sardegna/im84.jpg" />
+<GalleryImage image="/img/sardegna/im85.jpg" />
+<GalleryImage image="/img/sardegna/im86.jpg" />
+<GalleryImage image="/img/sardegna/im87.jpg" />
+<GalleryImage image="/img/sardegna/im88.jpg" />
+<GalleryImage image="/img/sardegna/im89.jpg" />
+<GalleryImage image="/img/sardegna/im90.jpg" />

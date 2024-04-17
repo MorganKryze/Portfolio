@@ -6,21 +6,41 @@
 
 ## Getting Started
 
-...
-
-Using pnpm (svelte, tailwind)
-
 ### Prerequisites
 
-...
+- [Node.js](https://nodejs.org/en/)
+- [pnpm](https://pnpm.io/)
+- [Astro](https://astro.build/)
+- [Tailwind CSS](https://docs.astro.build/en/guides/integrations-guide/tailwind/)
+- [Svelte](https://docs.astro.build/en/guides/integrations-guide/svelte/)
 
 ### Installing
 
-...
+Start by downloading the project to your local machine or cloning it using Git:
+
+```bash
+git clone https://github.com/MorganKryze/Portfolio.git
+```
+
+Then, navigate to the project directory:
+
+```bash
+cd Portfolio/src/
+```
 
 ### Build & Run
 
-...
+To run the project locally, run the following command:
+
+```bash
+pnpm run dev
+```
+
+To build the project, run the following command:
+
+```bash
+pnpm run build
+```
 
 ### Deployment
 
