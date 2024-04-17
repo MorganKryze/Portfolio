@@ -18,10 +18,13 @@ const { currentPage } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Photographolio</title>
     <meta property="og:title" content="Photographolio" />
-    <meta name="description" content="A space-ial photography portfolio" />
+    <meta
+      name="description"
+      content="A guided tour into my universe. Photography Portfolio."
+    />
     <meta
       property="og:description"
-      content="A space-ial photography portfolio"
+      content="A guided tour into my universe. Photography Portfolio."
     />
     <link
       rel="icon"
@@ -40,7 +43,7 @@ const { currentPage } = Astro.props;
     <slot />
     <Footer />
   </body>
-  
+
   <script>
     const setFavicon = (theme: string) => {
       const link: HTMLLinkElement | null =
