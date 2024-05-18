@@ -1,0 +1,30 @@
+<script>
+// JavaScript
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('click', function() {
+        const popup = document.createElement('img');
+        popup.src = this.src;
+        popup.classList.add('popup');
+
+        const overlay = document.createElement('div');
+        overlay.classList.add('overlay');
+
+        overlay.addEventListener('click', function() {
+            popup.style.opacity = '0';
+            this.style.opacity = '0';
+            setTimeout(() => {
+                popup.remove();
+                this.remove();
+            }, 300);
+        });
+
+        document.body.appendChild(overlay);
+        document.body.appendChild(popup);
+
+        setTimeout(() => {
+            popup.style.opacity = '1';
+            overlay.style.opacity = '1';
+        }, 0);
+    });
+});
+</script>
