@@ -1,30 +1,65 @@
 <script>
-// JavaScript
-document.querySelectorAll('img').forEach(img => {
-    img.addEventListener('click', function() {
-        const popup = document.createElement('img');
-        popup.src = this.src;
-        popup.classList.add('popup');
+  const imageSelector = 'img.object-cover';
+  const transitionMs = 350;
 
-        const overlay = document.createElement('div');
-        overlay.classList.add('overlay');
+  document.addEventListener('click', event => {
+    if (!(event instanceof MouseEvent)) return;
+    const target = event.target;
+    if (!(target instanceof HTMLImageElement)) return;
+    if (!target.matches(imageSelector)) return;
+    if (document.querySelector('.overlay')) return;
 
-        overlay.addEventListener('click', function() {
-            popup.style.opacity = '0';
-            this.style.opacity = '0';
-            setTimeout(() => {
-                popup.remove();
-                this.remove();
-            }, 300);
-        });
+    const popup = document.createElement('img');
+    popup.src = target.currentSrc || target.src;
+    popup.alt = target.alt || 'popup';
+    popup.classList.add('popup');
+    popup.style.setProperty('--popup-origin-x', `${event.clientX}px`);
+    popup.style.setProperty('--popup-origin-y', `${event.clientY}px`);
 
-        document.body.appendChild(overlay);
-        document.body.appendChild(popup);
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
 
-        setTimeout(() => {
-            popup.style.opacity = '1';
-            overlay.style.opacity = '1';
-        }, 0);
+    document.documentElement.classList.add('popup-open');
+    document.body.classList.add('popup-open');
+
+    let isClosing = false;
+
+    const closePopup = () => {
+      if (isClosing) return;
+      isClosing = true;
+
+      popup.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+
+      const cleanup = () => {
+        popup.remove();
+        overlay.remove();
+        document.documentElement.classList.remove('popup-open');
+        document.body.classList.remove('popup-open');
+        document.removeEventListener('keydown', onEscape);
+      };
+
+      popup.addEventListener('transitionend', cleanup, { once: true });
+      setTimeout(cleanup, transitionMs + 50);
+    };
+
+    const onEscape = (keyboardEvent: KeyboardEvent) => {
+      if (keyboardEvent.key === 'Escape') {
+        closePopup();
+      }
+    };
+
+    overlay.addEventListener('click', closePopup);
+    document.addEventListener('keydown', onEscape);
+
+    document.body.appendChild(overlay);
+    document.body.appendChild(popup);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        popup.classList.add('is-open');
+        overlay.classList.add('is-open');
+      });
     });
-});
+  });
 </script>

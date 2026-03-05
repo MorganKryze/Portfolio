@@ -1,18 +1,32 @@
 <script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-      } else {
-        entry.target.classList.remove("show");
-      }
-    });
-  });
+  const selector = '.hide-1, .hide-2, .hide-3, .hide-4, .hide-5';
+  const elements = document.querySelectorAll(selector);
 
-  const elements = document.querySelectorAll(
-    ".hide-1, .hide-2, .hide-3, .hide-4, .hide-5"
-  );
-  elements.forEach((element) => {
-    observer.observe(element);
-  });
+  const revealAll = () => {
+    elements.forEach(element => {
+      element.classList.add('show');
+    });
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    revealAll();
+  } else {
+    try {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+          } else {
+            entry.target.classList.remove('show');
+          }
+        });
+      });
+
+      elements.forEach(element => {
+        observer.observe(element);
+      });
+    } catch {
+      revealAll();
+    }
+  }
 </script>

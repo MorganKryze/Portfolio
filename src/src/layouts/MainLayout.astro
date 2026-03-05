@@ -1,8 +1,9 @@
 ---
-import "../styles/global.css";
+import '../styles/global.css';
 
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+import HideAnimation from '../animations/hide.astro';
 
 interface Props {
   currentPage: string;
@@ -39,6 +40,7 @@ const { currentPage } = Astro.props;
     <meta property="og:url" content="" />
   </head>
   <body class="bg-image">
+    <HideAnimation />
     <Nav currentPage={currentPage} />
     <slot />
     <Footer />
@@ -49,24 +51,24 @@ const { currentPage } = Astro.props;
       const link: HTMLLinkElement | null =
         document.querySelector('link[rel="icon"]');
       if (link) {
-        if (theme === "dark") {
-          link.href = "/Portfolio/dark-favicon.svg";
+        if (theme === 'dark') {
+          link.href = '/Portfolio/dark-favicon.svg';
         } else {
-          link.href = "/Portfolio/light-favicon.svg";
+          link.href = '/Portfolio/light-favicon.svg';
         }
       }
     };
 
     window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        setFavicon(e.matches ? "dark" : "light");
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', e => {
+        setFavicon(e.matches ? 'dark' : 'light');
       });
 
     setFavicon(
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
     );
   </script>
 </html>

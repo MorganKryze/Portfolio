@@ -1,10 +1,12 @@
 ---
-import "../styles/global.css";
+import '../styles/global.css';
 
-import Footer from "../components/Footer.astro";
-import Nav from "../components/Nav.astro";
-import GalleryImage from "../components/GalleryImage.astro";
-import Spacer from "../components/Spacer.astro";
+import Footer from '../components/Footer.astro';
+import Nav from '../components/Nav.astro';
+import GalleryImage from '../components/GalleryImage.astro';
+import Spacer from '../components/Spacer.astro';
+import HideAnimation from '../animations/hide.astro';
+import PopupAnimation from '../animations/popup.astro';
 
 interface Props {
   currentPage: string;
@@ -23,7 +25,7 @@ const {
   previousCollectionTitle,
   previousCollectionLink,
   nextCollectionTitle,
-  nextCollectionLink,
+  nextCollectionLink
 } = Astro.props;
 ---
 
@@ -55,6 +57,8 @@ const {
     <meta property="og:url" content="" />
   </head>
   <body class="bg-image">
+    <HideAnimation />
+    <PopupAnimation />
     <Nav currentPage={currentPage} />
 
     <main class="text-white min-h-screen">
@@ -124,24 +128,24 @@ const {
       const link: HTMLLinkElement | null =
         document.querySelector('link[rel="icon"]');
       if (link) {
-        if (theme === "dark") {
-          link.href = "/Portfolio/dark-favicon.svg";
+        if (theme === 'dark') {
+          link.href = '/Portfolio/dark-favicon.svg';
         } else {
-          link.href = "/Portfolio/light-favicon.svg";
+          link.href = '/Portfolio/light-favicon.svg';
         }
       }
     };
 
     window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        setFavicon(e.matches ? "dark" : "light");
+      .matchMedia('(prefers-color-scheme: dark)')
+      .addEventListener('change', e => {
+        setFavicon(e.matches ? 'dark' : 'light');
       });
 
     setFavicon(
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light"
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+        ? 'dark'
+        : 'light'
     );
   </script>
 </html>
